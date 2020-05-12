@@ -1,0 +1,7 @@
+homepage: "https://snowplowanalytics.com/"
+documentation: "https://www.simoahava.com/custom-templates/snowplow-analytics/"
+versions:
+  # Latest version
+  - sha: 32f7fad2db5ed84a955d9a15b083867c9dcecf2a
+    changeNotes: Initial release
+  # Older versions
