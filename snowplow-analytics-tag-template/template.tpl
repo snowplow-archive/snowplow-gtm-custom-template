@@ -1389,7 +1389,7 @@ ___TEMPLATE_PARAMETERS___
         "name": "trueTimestamp",
         "displayName": "Set Custom Timestamp",
         "simpleValueType": true,
-        "valueUnit": "seconds (UNIX timestamp)",
+        "valueUnit": "milliseconds (UNIX timestamp)",
         "valueHint": "Use system time",
         "help": "Set this to a UNIX timestamp in case you want to override the default timestamp used by Snowplow. \u003ca href\u003d\"https://github.com/snowplow/snowplow/wiki/2-Specific-event-tracking-with-the-Javascript-tracker#trueTimestamps\"\u003eRead more\u003c/a\u003e."
       }
