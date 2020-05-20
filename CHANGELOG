@@ -1,3 +1,7 @@
+Version 1.0.1 (2020-05-20)
+--------------------------
+Update injectScript permissions to have AWS S3 Cloudfront and GCP Storage by default
+
 Version 1.0.0 (2020-05-13)
 --------------------------
 Initial release, thanks to the contribution from @sahava
