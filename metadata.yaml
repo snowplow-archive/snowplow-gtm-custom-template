@@ -2,6 +2,10 @@ homepage: "https://snowplowanalytics.com/"
 documentation: "https://www.simoahava.com/custom-templates/snowplow-analytics/"
 versions:
   # Latest version
+  - sha: c846de792fffce7c636d2492ad605f92a329ac23
+    changeNotes: |2
+      Update injectScript permissions to have AWS S3 Cloudfront and GCP Storage by default.
+      Update tests, help text.
+  # Older versions
   - sha: 822e23b309cf486c057e020f6016d30341cfd81b
     changeNotes: Initial release
-  # Older versions
