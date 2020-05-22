@@ -1989,8 +1989,8 @@ switch (data.eventType) {
   case 'enhancedEcommerce':
     let ecom;
     // Use dataLayer if available, otherwise use variable
-    if (data.userDataLayer) {
-      ecom = copyFromDataLayer('ecommerce', '1');
+    if (data.enhancedEcommerceUseDataLayer) {
+      ecom = copyFromDataLayer('ecommerce', 1);
     } else {
       ecom = getType(data.enhancedEcommerceVariable) === 'object' ? data.enhancedEcommerceVariable.ecommerce : null;
     }
@@ -2607,6 +2607,46 @@ scenarios:
     runCode(mockData);
 
     // Verify that the tag finished successfully.
+    assertApi('gtmOnSuccess').wasCalled();
+- name: Enhanced Ecommerce works with Use Data Layer
+  code: |-
+    mockData.eventType = 'enhancedEcommerce';
+    mockData.enhancedEcommerceUseDataLayer = true;
+    let impression = false;
+    let promo = false;
+
+    mock('copyFromDataLayer', (key, version) => {
+      if (key === 'ecommerce' && version === 1) {
+        return {
+          impressions: [{
+            id: 'impression1'
+          }],
+          promoView: {
+            promotions: [{
+              id: 'promo1'
+            }]
+          }
+        };
+      }
+    });
+
+    mock('copyFromWindow', key => {
+      if (key === mockData.globalName) {
+        return function() {
+          if (arguments[0] === 'addEnhancedEcommerceImpressionContext' && arguments[1] === 'impression1') impression = true;
+          if (arguments[0] === 'addEnhancedEcommercePromoContext' && arguments[1] === 'promo1') promo = true;
+        };
+      }
+      if (key === '_snowplow_trackers') return [];
+    });
+
+    // Call runCode to run the template's code.
+    runCode(mockData);
+
+    // Verify that the tag finished successfully.
+    assertThat(impression, 'Enhanced Ecommerce failed - incorrect impression parsing').isEqualTo(true);
+    assertThat(promo, 'Enhanced Ecommerce failed - incorrect promo parsing').isEqualTo(true);
+
     assertApi('gtmOnSuccess').wasCalled();
 setup: "const log = require('logToConsole');\n\nconst mockData = {\n  trackerName:\
   \ 'spTracker',\n  selfHostedUrl: 'https://abcd.cloudfront.net/sp.js',\n  globalName:\
