@@ -2,7 +2,7 @@ homepage: "https://snowplowanalytics.com/"
 documentation: "https://www.simoahava.com/custom-templates/snowplow-analytics/"
 versions:
   # Latest version
-  - sha: a9c9a4132a727e1834f77d5b8b5133a31ff30b56
+  - sha: 339c6227905647920eca802b58ae585234621f41~
     changeNotes: |2
       Fix broken Enhanced Ecommerce tracking with Use Data Layer.
       Update unit tests.
