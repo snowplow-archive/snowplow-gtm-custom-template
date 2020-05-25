@@ -1572,14 +1572,15 @@ const parseEECObject = obj => {
   // Add an impression context for each impression in the hit
   if (getType(obj.impressions) === 'array') {
     obj.impressions.forEach(i => tracker('addEnhancedEcommerceImpressionContext',
-                                         i.id,
-                 				         i.name,
-				                         i.list,
-				                         i.brand,
-				                         i.category,
-				                         i.position,
-				                         i.price,
-				                         obj.currencyCode));
+									i.id,
+									i.name,
+									i.list,
+									i.brand,
+									i.category,
+									i.variant,
+									i.position,
+									i.price,
+									obj.currencyCode));
     action = 'view';
   }
   // Track promotion views for each promotion in the hit, as long as there isn't a promoClick in the object
