@@ -1592,7 +1592,7 @@ const parseEECObject = obj => {
       obj[a].products.forEach(p => tracker('addEnhancedEcommerceProductContext',
 				                           p.id,
                 				           p.name,
-                          				   obj[a].actionField ? obj[a].actionField.list : null,
+                          				   obj[a].actionField ? obj[a].actionField.list : '',
  				                           p.brand,
                  				           p.category,
 				                           p.variant,
