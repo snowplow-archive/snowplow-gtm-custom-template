@@ -1,3 +1,9 @@
+Version 1.0.2 (2020-05-26)
+--------------------------
+Fix addEnhancedEcommerceProductContext setting product list to null
+Fix addEnhancedEcommerceImpressionContext picking up the wrong positional arguments
+Fix Enhanced Ecommerce option when using Data Layer
+
 Version 1.0.1 (2020-05-20)
 --------------------------
 Update injectScript permissions to have AWS S3 Cloudfront and GCP Storage by default
