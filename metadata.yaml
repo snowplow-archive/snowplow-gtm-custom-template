@@ -2,11 +2,11 @@ homepage: "https://snowplowanalytics.com/"
 documentation: "https://www.simoahava.com/custom-templates/snowplow-analytics/"
 versions:
   # Latest version
-  - sha: 211677c0465df619c343a62691d7eb1ed68e3c6a
+  - sha: dc832546b87fc1531e92b2e5abecf3bafaa5f4c7
     changeNotes: |2
-      Fix broken Enhanced Ecommerce tracking with Use Data Layer.
-      Fix EEC impression object parsing.
-      Fix product object list fallback from null to string.
+      Fix addEnhancedEcommerceProductContext setting product list to null.
+      Fix addEnhancedEcommerceImpressionContext picking up the wrong positional arguments.
+      Fix Enhanced Ecommerce option when using Data Layer.
       Update unit tests.
   # Older versions
   - sha: 007582afb2385f52a2dffca6183ef0d1390616fe
