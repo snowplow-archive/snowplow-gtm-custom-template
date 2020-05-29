@@ -2,7 +2,7 @@ homepage: "https://snowplowanalytics.com/"
 documentation: "https://www.simoahava.com/custom-templates/snowplow-analytics/"
 versions:
   # Latest version
-  - sha: ed65492e9464714b1297ae9ca15b3d84ff3e6ded
+  - sha: 8c9d57a9d43195357778db17bd9ba653a58bf688
     changeNotes: |2
       Fix addEnhancedEcommerceProductContext setting product list to null.
       Fix addEnhancedEcommerceImpressionContext picking up the wrong positional arguments.
