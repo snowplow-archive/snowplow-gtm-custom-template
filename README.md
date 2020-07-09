@@ -39,7 +39,7 @@ After pushing the changes, Google Tag Manager should update the template in the 
 | Tag Template |
 |---------------------------------|
 | ![i1][techdocs-image]           |
-| **[Technical Docs](https://www.simoahava.com/analytics/custom-templates/snowplow-analytics/)** |
+| **[Technical Docs](https://www.simoahava.com/custom-templates/snowplow-analytics/)** |
 
 ## Copyright and license
 
